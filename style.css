@@ -1,0 +1,359 @@
+@import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
+
+/* html {
+    scroll-behavior: smooth;
+} */
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 16px;
+    color: #007AFF;
+    /* background: url('Background.png'); */
+    background-color: #BAE1FF;
+    background-repeat: inherit font-family 'Roboto Condensed', 'sans-serif'
+    /* margin: 0px;
+    padding: 0px;
+    height: 100%; */
+}
+
+
+nav {
+    background: rgba(225, 163, 2, 0.5);
+    height: 130px;
+    width: 100%;
+    padding-left: 50px;
+
+
+
+}
+
+label.logo {
+    color: #dadada;
+
+}
+
+nav ul {
+    float: right;
+    margin-right: 50px;
+    margin-left: 50px;
+    border-radius: 10px;
+}
+
+/* nav bar */
+nav ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 30px;
+    vertical-align: top;
+    border-radius: 10px;
+    /* nav text below */
+}
+
+nav ul li a {
+    color: #007AFF;
+    font-size: large;
+    padding: 8px 16px;
+    border-radius: 10px;
+    text-transform: uppercase;
+}
+
+a:hover {
+    background: #BAE1FF;
+}
+
+
+
+.heroImg {
+
+    margin: 0 auto;
+    padding: 0 50px;
+    margin-top: 48px;
+    text-align: center;
+}
+
+h1 {
+    color: #007AFF;
+    font-family: Cabin Sketch;
+    font-size: 48px;
+    font-weight: 700;
+    letter-spacing: 8px;
+    margin-bottom: 24px
+}
+
+h2 {
+    color: #007AFF;
+    font-family: Cabin Sketch;
+    font-size: 36px;
+    font-weight: 400;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-top: 48px;
+    padding-bottom: 36;
+
+
+}
+
+h3 {
+    color: #007AFF;
+    font-family: Cabin Sketch;
+    font-size: 24;
+    margin-top: 24px;
+    margin-bottom: 24px;
+    padding-top: 24px;
+    padding-bottom: 24;
+}
+
+p {
+    font-size: 24px;
+    color: #007AFF;
+    line-height: 48px;
+    margin-bottom: 100px;
+    margin-top: 50px;
+    margin-left: 250px;
+    margin-right: 250px;
+}
+
+.btn {
+    display: inline-block;
+    padding: 24px 16px;
+    background: #f6f6f6;
+    font-size: 24px;
+    text-decoration: none;
+    color: #007AFF;
+    transition: 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.btn:hover {
+    background: #dadada;
+    height: 28px;
+}
+
+.btn2 {
+    display: inline-block;
+    padding: 18px 12px;
+    background: rgba(225, 163, 2, 0.5);
+    font-size: 18px;
+    text-decoration: none;
+    color: #007AFF;
+    transition: 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
+
+.btn2:hover {
+    background: #dadada;
+    height: 24px;
+}
+
+/* trying to get cards to align horizontally? */
+/* .mySkills{
+    background-color: whitesmoke;
+    display: flex;
+    justify-content: space-around;
+    flex-direction: row;
+    padding: 24px;
+    display: inline-block;
+    overflow: auto;
+    width: 100%; */
+/* add dimensions above? where to set the body to larger? */
+/* } */
+
+.flex {
+    display: flex;
+    flex-direction: row;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+    margin: 36px;
+
+}
+
+.card {
+    margin: 10px;
+    border: 1px solid #007AFF;
+    padding: 12px;
+}
+
+.card:hover {
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+}
+
+
+
+#pageTopic {
+    background-color: rgba(225, 163, 2, 0.5);
+    padding: 15px;
+    height: 25px;
+    color: #007AFF;
+    font-size: 36px;
+    text-align: center;
+    border-bottom: 5px solid #007AFF;
+}
+
+#workGrid {
+    margin: 24px;
+    margin-bottom: 48px;
+    display:grid;
+    /* min-height: 500px;
+    height: 50vh; */
+    grid-template-rows: 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-rows: 45% 55%; */
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    /* grid-template-columns: 75% 25%; */
+    grid-template-areas:
+        "doiMockup doiMockup infoArea infoArea infoArea"
+        "doiMockup doiMockup infoArea infoArea infoArea"
+        "doiMockup doiMockup infoArea infoArea infoArea"
+        "doiMockup doiMockup infoArea infoArea infoArea"
+        "... ...CTA ... ...";
+    /* margin: 50px; */
+    border: 1px solid #007AFF;
+    background-color: rgba(255, 255, 255, 0.5);
+    padding: 12px;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    transition: 0.3s;
+
+
+}
+.workGridArea {
+
+    background-position: center;
+    background-size: contain;
+    background-repeat: no-repeat;
+    margin: 5px;
+    cursor: pointer;
+    display: grid;
+    align-content: flex-start;
+    justify-content: center;
+    align-items: flex-start;
+
+}
+
+
+  
+
+/* footer covers bottom of body? */
+
+
+#doiMockup {
+    grid-area: doiMockup;
+    /* background-repeat: no-repeat; */
+    /* display:flex;  */
+
+}
+
+#infoArea {
+    grid-area: infoArea;
+    /* background-color: rgba(255,255,255,0.2
+    ); */
+    padding: 24px;
+
+}
+
+.image2 {
+    height: auto;
+    max-width: 100%;
+    background-image: contain;
+    grid-area: doiMockup;  
+    /* height: 448px;;
+    width: 448px; */
+    /* border: 1px solid orange; */
+    /* transform: scale(1); */
+    /* display:inline; */
+    
+    /* transform: translate(5, 5); */
+
+
+
+}
+
+ .image2 img { 
+    height: auto;
+    max-width: 100%;
+    background-image: contain;  
+    /* transform: scale(1);
+    transform: translate(1, 5); */
+} 
+#CTA {
+    grid-area: CTA;
+    /* background-color: rgba(255,255,255,0.2); */
+
+
+}
+
+.footer {
+    display: flex;
+    width: 100vw;
+    height: 130px;
+    background-color: rgba(225, 163, 2, 0.5);
+
+}
+
+.footer ul {
+    /* justify-content: center; */
+    margin-right: 50px;
+    margin-left: 50px;
+    /* text-align: center; */
+}
+
+/* footer */
+.footer ul li {
+    display: inline-block;
+    line-height: 80px;
+    margin: 30px;
+    vertical-align: top;
+    /* nav text below */
+}
+
+.footer ul li a {
+    color: #007AFF;
+    font-size: large;
+    padding: 8px 16px;
+    border-radius: 10px;
+    text-transform: uppercase;
+    padding-left: 100px;
+}
+
+@media only screen and (max-width:800px) {
+    #workGrid {
+        grid-template-columns: 1fr;
+        grid-template-rows:1fr 1fr 1fr;
+        grid-template-areas:
+            "workGridArea"
+            "infoArea"
+            "CTA CTA"
+        ;
+    }
+
+    nav {
+        display:flexbox;
+        flex-wrap: wrap;
+        background-color:inherit;
+    }
+
+    .footer {
+        display:flexbox;
+        flex-wrap: wrap;
+        background-color:inherit;
+    }
+
+    p {
+        width: fit-content;
+        margin: 24px;
+        font-size: medium;
+    }
+
+    .flex {
+        display: flex;
+        flex-direction: column;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        transition: 0.3s;
+        margin: 36px;
+        
+
+    }
+  
+
+}
