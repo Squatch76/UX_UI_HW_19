@@ -14,7 +14,9 @@
    
 
     nav {
-        display: none;
+        display: flex;
+        display: inline;
+        flex-direction: column;
     }
 
     .footer {
