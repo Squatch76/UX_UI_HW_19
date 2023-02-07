@@ -6,30 +6,57 @@
         @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
         @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
     </style>
-
+    <script src="https://kit.fontawesome.com/88473ee85b.js" crossorigin="anonymous"></script>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="./css/#mobile_screens.css">
     <link rel="stylesheet" href="./css/mobile_screens.css">
     <link rel="stylesheet" href="./css/style.css">
-    <link href="mobile_screens.css" rel="styleshhet" type="text/css">
+    <link href="mobile_screens.css" rel="stylesheet" type="text/css">
 
     <title>About Me Page</title>
-
-
 </head>
 
 <body>
     <nav>
         <label class="picture"><img src="./images/small green picture.png" alt=""></label>
         <ul>
-            <li><a class="active" href="#">Contact</a></li>
-            <li><a href="#">About</a></li>
-            <li><a href="#">Work</a></li>
-            <li><a href="#">Skills</a></li>
+            <li><a href="#">Resume  <i class="fa-solid fa-caret-down fa-xl"></i></a>
+                
+                <ul>
+                <!-- <li><a href="./images/Jeremiah_Forster_Resume.pdf - Page 1 of 3.png">View Resume</a></li> -->
+
+                    <li><a href="#">View Resume   <i class="fa-solid fa-caret-down fa-l"></i></a></li>
+                    <li><a href="#">Download Resume   <i class="fa-solid fa-caret-down fa-l"></i></a></li>
+                    <!-- <i class="fa-solid fa-caret-down"></i> -->
+
+                </ul>
+            </li>
+            <li><a href="#">About Me  <i class="fa-solid fa-caret-down fa-xl"></i></a>
+                <ul>
+                    <li><a href="#">My Journey</a></li>
+                    <li><a href="#">My Inspirations</a></li>
+
+                </ul>
+            </li>
+            <!-- <li><a href="#">Work</a></li> -->
+            <li><a href="#">My Work   <i class="fa-solid fa-caret-down fa-xl"></i></a>
+                <ul>
+                    <li><a href="#workGrid">Case Studies   <i class="fa-solid fa-caret-down"></i></a></li>
+                </ul>
+            </li>
+            <!-- <li><a href="#">Skills</a></li> -->
+            <li><a href="#">Skills   <i class="fa-solid fa-caret-down fa-xl"></i></a>
+                <ul>
+                    <li><a href="#mySkills">User Research   <i class="fa-solid fa-caret-down"></i></a></li>
+                    <li><a href="#mySkills">Interface Design   <i class="fa-solid fa-caret-down"></i></a></li>
+                    <li><a href="#mySkills">Web Development   <i class="fa-solid fa-caret-down"></i></a></li>
+                </ul>
+            </li>
         </ul>
     </nav>
+
 
 
     <div id="page-container">
@@ -38,17 +65,21 @@
 
             <div class="heroImg">
                 <h1>Jeremiah Forster</h1>
+                <h1>Jeremiah Forster</h1>
                 <h2>UX / UI Designer</h2>
                 <div class="image">
-                    <img src="./images/My Logo shadow small.png" alt="my logo design">
+                    <img src="images/My Logo shadow small.png" alt="my logo design">
 
                 </div>
                 <p>I have a passion for designing interactive experiences with an unbiased and nuanced approach to leave
                     a positive impact on people, environment and society. I personally enjoy working on projects that
                     require research and strategy as well as visual design to help users feel empowered and activated.
                 </p>
-
-                <a href="#" class="btn">Download Resume</a>
+               
+                <!-- <a href="modal" class="btn">Contact Me</a> -->
+                <button class="modal-btn"><i class="fa-regular fa-envelope fa-xl"></i>   Contact Me</i></button>
+                
+               
                 <section>
                     <div>
                         <h2 id="pageTopic">My Skills</h2>
@@ -118,6 +149,9 @@
             </div>
             <div id="CTA" class="workGridArea">
                 <a href="#" class="btn2">View Project</a>
+                <!-- <div id="CTA2" class="workGridArea">
+                <a href="#" class="btn2">Top</a> -->
+                
             </div>
         </section>
     </div>
@@ -174,18 +208,43 @@
 
 
     </div>
+
     <section>
+
         <footer class="footer">
             <ul>
-                <li><a class="active" href="#">Contact</a></li>
+                <li><a class="active" href="#">Resume</a></li>
                 <li><a href="#">Work</a></li>
                 <li><a href="#">About</a></li>
                 <li><a href="#">Skills</a></li>
+                <li><a href="#">Contact</a></li>
+
             </ul>
         </footer>
     </section>
+    <div class="modal-bg">
+        <div class="modal">
+            <h2>Contact Me</h2>
+            <label class="name">Name: </label>
+            <input type="text" name="name">
+            <label for="email">Email:</label>
+            <input type="text" name="email">
+            <label class="form-label">Type Your Message Here</label>
+            <textarea class="form-control"></textarea>
+             
+            <button class="submit-btn">Submit</button>
+            <span class="modal-close">X</span>
+        </div>
+    </div>
+    
+    <script src="js/index.js"></script>
 
 </body>
+<!-- imported script below-->
+<script src="js/index.js"></script>
+
+<!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script> -->
 
 
 </html>
+

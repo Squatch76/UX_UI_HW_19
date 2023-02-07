@@ -1,14 +1,18 @@
 @import url('https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@400;700&display=swap');
 @import url('https://fonts.googleapis.com/css2?family=Cabin+Sketch:wght@400;700&display=swap');
 
-/* html {
+html {
     scroll-behavior: smooth;
-} */
-
+}
+* {
+    margin: 0;
+    padding: 0;
+}
 body {
+    position:absolute;
     font-family: Arial, Helvetica, sans-serif;
     font-size: 16px;
-    color: #007AFF;
+    color: #315A86;
     /* background: url('Background.png'); */
     background-color: #BAE1FF;
     background-repeat: inherit font-family 'Roboto Condensed', 'sans-serif'
@@ -19,50 +23,80 @@ body {
 
 
 nav {
-    background: rgba(225, 163, 2, 0.5);
-    height: 130px;
+    position: absolute;
     width: 100%;
-    padding-left: 50px;
-
-
-
-}
-
-label.logo {
-    color: #dadada;
+    height:120px;
+    background-color: #315A86;
 
 }
 
+/* nav p {
+    font-family: Arial, Helvetica, sans-serif;
+    color:#007AFF;
+    font-size: 36px;
+    line-height: 48px;
+    float:right;
+    padding: 0px 20px;
+} */
+/* space from left to right */
 nav ul {
-    float: right;
-    margin-right: 50px;
-    margin-left: 50px;
-    border-radius: 10px;
+    position: relative;
+    float:right;
 }
 
-/* nav bar */
+/* how the text is layed out */
 nav ul li {
-    display: inline-block;
-    line-height: 80px;
-    margin: 30px;
-    vertical-align: top;
-    border-radius: 10px;
-    /* nav text below */
-}
+    float: right;
+    list-style: none;
+    position:relative;
 
+}
+/* nav ul:hover ul {
+    float: right;
+    list-style: none;
+    position:relative;
+    background-color: dimgray;
+    z-index: 1000;
+} */
+/* textt inside navigation */
 nav ul li a {
-    color: #007AFF;
-    font-size: large;
-    padding: 8px 16px;
-    border-radius: 10px;
-    text-transform: uppercase;
+    display:block;
+    font-family: Arial, Helvetica, sans-serif;
+    color:white;
+    font-size: 18px;
+    line-height: 24px;
+    padding: 42px 72px;
+    text-decoration: none;
+    background-color: #315A86;
+}
+/* configures across nav bar */
+nav ul li ul {
+    display:none;
+    position: absolute;
 }
 
-a:hover {
-    background: #BAE1FF;
+nav ul li:hover ul {
+    display:block;
+    
+        
+}
+nav ul li ul li {
+   /* width: 180px; */
+   /* border-radius: 4px; */
 }
 
-
+nav ul li ul li a {
+    width: 200px;
+    border-radius:0 0 4 4;
+    padding: 12px 14px;
+}
+/* hover state of a */
+nav ul li ul li a:hover{
+    background-color:lightslategrey;
+    display: block;
+    position:relative;
+    
+}
 
 .heroImg {
 
@@ -73,7 +107,7 @@ a:hover {
 }
 
 h1 {
-    color: #007AFF;
+    color: #315A86;
     font-family: Cabin Sketch;
     font-size: 48px;
     font-weight: 700;
@@ -82,7 +116,7 @@ h1 {
 }
 
 h2 {
-    color: #007AFF;
+    color: #315A86;
     font-family: Cabin Sketch;
     font-size: 36px;
     font-weight: 400;
@@ -95,7 +129,7 @@ h2 {
 }
 
 h3 {
-    color: #007AFF;
+    color: #315A86;
     font-family: Cabin Sketch;
     font-size: 24;
     margin-top: 24px;
@@ -106,12 +140,12 @@ h3 {
 
 p {
     font-size: 24px;
-    color: #007AFF;
+    color: #315A86;
     line-height: 48px;
     margin-bottom: 100px;
     margin-top: 50px;
-    margin-left: 250px;
-    margin-right: 250px;
+    margin-left: 100px;
+    margin-right: 100px;
 }
 
 .btn {
@@ -120,7 +154,7 @@ p {
     background: #f6f6f6;
     font-size: 24px;
     text-decoration: none;
-    color: #007AFF;
+    color: #315A86;
     transition: 0.5s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
@@ -137,29 +171,99 @@ p {
     background: rgba(225, 163, 2, 0.5);
     font-size: 18px;
     text-decoration: none;
-    color: #007AFF;
+    color: #315A86;
     transition: 0.5s;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
 
 }
+
 
 .btn2:hover {
     background: #dadada;
     height: 24px;
 }
 
-/* trying to get cards to align horizontally? */
-/* .mySkills{
+.modal-bg{
+    /* position:absolute; */
+    position:fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    /* z-index: 1000; */
+    background-color: rgba(49, 90, 134, 0.8);
+    display:flex;
+    justify-content: center;
+    align-items: center;
+    visibility: hidden;
+    opacity: 0;
+    transition: visibility 0, opacity 1s;
+
+}
+.bg-active {
+    visibility: visible;
+    opacity: 1;
+}
+
+.modal {
+    position:relative;
     background-color: whitesmoke;
+    padding: 36px;
+    margin: 24px;
+    width:30%;
+    border-radius: 3px;
     display: flex;
+    align-items: center;
+    flex-direction: column;
     justify-content: space-around;
-    flex-direction: row;
-    padding: 24px;
+    cursor: pointer;
+}
+.modal-btn::before {
     display: inline-block;
-    overflow: auto;
-    width: 100%; */
-/* add dimensions above? where to set the body to larger? */
-/* } */
+    margin-right: 10px;
+}
+.modal-btn {
+    display: inline-block;
+    padding: 16px 8px;
+    /* background: #f6f6f6; */
+    font-size: 24px;
+    text-decoration: none;
+    color: #315A86;
+    transition: 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    
+
+}
+/* .modal button {
+    display: inline-block;
+    padding: 16px 8px;
+    background: #f6f6f6;
+    font-size: 16px;
+    text-decoration: none;
+    color: #007AFF;
+    transition: 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+    cursor: pointer;
+    border-radius: 8px;
+} */
+.modal-close {
+    position:absolute;
+    top: 10px;
+    right: 10px;
+    font-weight: bold;
+}
+.submit-btn {
+    display: inline-block;
+    padding: 18px 12px;
+    background: rgba(225, 163, 2, 0.5);
+    font-size: 18px;
+    text-decoration: none;
+    color: #007AFF;
+    transition: 0.5s;
+    box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+
+}
 
 .flex {
     display: flex;
@@ -171,9 +275,12 @@ p {
 }
 
 .card {
+   
     margin: 10px;
-    border: 1px solid #007AFF;
+    border: 1px solid #315A86;
     padding: 12px;
+   
+   
 }
 
 .card:hover {
@@ -186,10 +293,10 @@ p {
     background-color: rgba(225, 163, 2, 0.5);
     padding: 15px;
     height: 25px;
-    color: #007AFF;
+    color: #315A86;
     font-size: 36px;
     text-align: center;
-    border-bottom: 5px solid #007AFF;
+    border-bottom: 5px solid #315A86;
 }
 
 #workGrid {
@@ -209,7 +316,7 @@ p {
         "doiMockup doiMockup infoArea infoArea infoArea"
         "... ...CTA ... ...";
     /* margin: 50px; */
-    border: 1px solid #007AFF;
+    border: 1px solid #315A86;
     background-color: rgba(255, 255, 255, 0.5);
     padding: 12px;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
@@ -278,10 +385,27 @@ p {
 } 
 #CTA {
     grid-area: CTA;
-    /* background-color: rgba(255,255,255,0.2); */
-
-
 }
+
+.form-control {
+    height: 100px;
+    margin:8px 8px 8px 24px;
+    width:75%;
+}
+input {
+    width: 75%
+}
+
+/* #CTA2 {
+    grid-area: CTA2;
+    display:flexbox;
+    flex-direction:row; */
+    
+   
+    /* background-color: rgba(255,255,255,0.2);
+
+
+} */
 
 .footer {
     display: flex;
@@ -308,7 +432,7 @@ p {
 }
 
 .footer ul li a {
-    color: #007AFF;
+    color: #315A86;
     font-size: large;
     padding: 8px 16px;
     border-radius: 10px;
